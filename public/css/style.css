@@ -1,0 +1,78 @@
+#edit_btn {
+  margin-right: 10px;
+}
+i.far.fa-edit {
+  margin-left: 7px;
+  color: darkslategray;
+  margin-top: 25px;
+}
+nav {
+  margin-bottom: 3em;
+}
+#messages {
+  float: right;
+  margin-top: -25px;
+  margin-bottom: -40px;
+}
+#heins {
+  clear: both;
+}
+#hzwei {
+  padding-top: 1px;
+}
+#messages i.far, #error_title i.far, #error_body i.far, #error_author i.far {
+  margin-left: 10px;
+}
+nav img {
+  width: 50px;
+}
+#error_title, #error_author, #error_body {
+  float: right;
+  margin-left: 5px;
+} 
+li img {
+  width: 80px;
+  float: left;
+  margin-right: 15px;
+}
+h2 img {
+  width: 65px;
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+#items {
+  clear: both;
+  margin-top: 25px;
+} 
+.dropdown {
+  margin-bottom: 24px;
+}
+.checkbox {
+  margin-top: 10px;
+  font-size: 20px;
+  color: darkslategray;
+  cursor: pointer;
+}
+#hdrei {
+  margin-top: -1.1em;
+  margin-left: 3em;
+}
+#edit_item {
+  margin-top: 8px;
+  color: darkslategray;
+  font-size: 17px;
+  margin-right: -7px;
+}
+#new_item {
+  color: darkslategray;
+  font-size: 40px;
+  margin-top: 5px;
+  margin-right: 4px;
+}
+#index_item {
+  color: darkslategray;
+  font-size: 40px;
+  margin-top: -45px;
+  margin-right: 16px;
+}

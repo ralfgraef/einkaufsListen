@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/articles/edit/' + article._id + '/' + watt.id)
+    .form-group
+        label Listeneintrag ändern:
+        input.form-control(name='list_item', type='text', value = watt.name)
+    br
+    input.btn.btn-outline-primary.custom-btn(type='submit', value='Ändern)

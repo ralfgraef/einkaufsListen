@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h2(id='hzwei')
+    img(src='/img/' + article.title + '.png' alt='Logo')
+  a(href='/articles/article_item/' + article._id)
+    i(id='new_item').fas.fa-plus-circle.float-right
+      
+  h4 Erstellt von #{article.author} 
+  h5 am #{article.date}
+  
+  ul(id="items").list-group
+    each eintrag, i in article.list_item
+      li.list-group-item
+        if !eintrag.checked
+          i(id=eintrag.id, data-id=article._id).far.fa-square.float-left.checkbox
+            h5(id="hdrei")= eintrag.name            
+        else
+          i(id=eintrag.id, data-id=article._id).far.fa-check-square.float-left.checkbox
+            h5(id="hdrei")
+              del= eintrag.name
+        a(href='/articles/edit/' + article._id + '/' + eintrag.id)
+          i(id="edit_item").far.fa-edit.float-right
+      br  
+  
+  hr
+  a.btn.btn-outline-danger.delete-article(href='#', data-id=article._id) Löschen 
+    i.far.fa-trash-alt

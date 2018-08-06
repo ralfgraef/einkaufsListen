@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h2(id="heins") #{title}
+  a(href='/articles/add')
+    i(id='index_item').fas.fa-plus-circle.float-right
+  br
+  ul.list-group
+    each article, i in articles
+      li.list-group-item
+        img(src='/img/' + article.title + '.png' alt='Logo')
+        h4
+          a(href="/articles/" + article._id)
+            i.far.fa-edit.float-right 
+        h3= article.title
+        h5= article.date     
+      br

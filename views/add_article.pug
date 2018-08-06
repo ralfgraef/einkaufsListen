@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h2 #{title}
+  br
+  form(method='POST', action='/articles/add')
+    .form-group
+      label Wo willst Du einkaufen?
+      input.form-control(name='title', type='text') 
+    .form-group
+      label Liste erstellt von:
+      select.form-control(name='author', type='text')
+        option(value='Anne') Anne
+        option(value='Ralf') Ralf
+    .form-group
+      label Erster Eintrag:
+      input.form-control(name='list_item', type='text')
+    br
+    input.btn.btn-outline-dark(type='submit', value='Hinzufügen')

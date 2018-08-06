@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title EinkaufsListe
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' type='text/css' href='/bower_components/components-font-awesome/css/fontawesome-all.css')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='shortcut icon' href='/img/favicon1.png', type='image/x-icon')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container
+        img(src="/img/favicon1.png", alt="Logo Einkaufswagen")
+        a.navbar-brand(href='/') EinkaufsListe
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/articles/add') Neue Liste
+           
+    .container
+      != messages('message.pug', locals)
+      if errors
+        each error, i in errors
+          div(id=`error_${i}` class="alert alert-danger") #{error.msg}
+            i.far.fa-times-circle
+      block content
+      br
+      hr
+      footer
+        p &copy; 2018 Ralf Gräf
+
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')
