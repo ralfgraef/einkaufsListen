@@ -1,2 +1,2 @@
-# nodekb
-# Test for node.js, express, mongodb
+# einkaufsListen
+# simple node.js, express, mongodb app 
