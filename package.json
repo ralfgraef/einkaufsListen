@@ -1,7 +1,7 @@
 {
-  "name": "nodekbtraversy",
+  "name": "einkaufsListen",
   "version": "1.0.0",
-  "description": "Simple konwledgebase app",
+  "description": "Simple shoppingList-app",
   "main": "app.js",
   "scripts": {
     "start": "node app"
