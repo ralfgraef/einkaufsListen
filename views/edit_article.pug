@@ -5,6 +5,6 @@ block content
   form(method='POST', action='/articles/edit/' + article._id + '/' + watt.id)
     .form-group
         label Listeneintrag ändern:
-        input.form-control(name='list_item', type='text', value = watt.name)
+        input.form-control(name='list_item', type='text', value = watt.name, autofocus)
     br
     input.btn.btn-outline-primary.custom-btn(type='submit', value='Ändern)

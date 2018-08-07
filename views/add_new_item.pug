@@ -5,6 +5,6 @@ block content
   form(method='POST', action='/articles/add_new_item/' + article._id)
     .form-group
       label Neuer Listeneintrag:
-      input.form-control(name='list_item', type='text')
+      input.form-control(name='list_item', type='text', autofocus)
     br
     input.btn.btn-outline-dark(type='submit', value='Hinzufügen')
