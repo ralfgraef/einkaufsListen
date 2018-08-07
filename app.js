@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const flash = require('express-flash');
 const session = require('express-session'); 
 
-mongoose.connect('mongodb://ralf:qwyxop1968@ds113452.mlab.com:13452/einkaufslisten');
-// mongoose.connect('mongodb://localhost/nodekb');
+//mongoose.connect('mongodb://ralf:qwyxop1968@ds113452.mlab.com:13452/einkaufslisten');
+mongoose.connect('mongodb://localhost/nodekb');
 let db = mongoose.connection;
 
 // Check connection
