@@ -1,3 +1,17 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px; 
+  line-height: 60px;
+}
+
 #edit_btn {
   margin-right: 10px;
 }
