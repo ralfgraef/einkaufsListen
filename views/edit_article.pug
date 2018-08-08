@@ -1,10 +1,12 @@
 extends layout
 
 block content
-  h1 #{title}
+  h2 #{title}
   form(method='POST', action='/articles/edit/' + article._id + '/' + watt.id)
     .form-group
         label Listeneintrag ändern:
         input.form-control(name='list_item', type='text', value = watt.name, autofocus)
     br
-    input.btn.btn-outline-primary.custom-btn(type='submit', value='Ändern')
+    input.btn.btn-outline-dark.custom-btn(type='submit', value='Ändern')
+    a.btn.btn-outline-danger.delete-item.float-right(href='#', data-id=article._id) Löschen 
+      i.far.fa-trash-alt

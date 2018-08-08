@@ -21,6 +21,29 @@ $(document).ready(function() {
     }; 
   });
 
+  $('.delete-item').on('click', function(e){
+    $target = $(e.target);
+    console.log('$target: ', $target);
+    const id = $target.attr('data-id');
+    console.log('id: ', id);
+
+    // if(confirm('Bist Du sicher?')) {
+    //   $target = $(e.target);
+    //   console.log('$target: ', $target);
+    //   const id = $target.attr('data-id');
+    //   $.ajax({
+    //     type: 'DELETE',
+    //     url:'/articles/' + id,
+    //     success: function(response) {
+    //       window.location.href='/'
+    //     },
+    //     error: function(err) {
+    //       console.log(err);
+    //     }
+    //   });
+    // }; 
+  });
+
   $('.checkbox').on('click', function(e) {
     $target = $(e.target);
     const id = $target.attr('data-id');
