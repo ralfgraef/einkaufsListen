@@ -109,12 +109,36 @@ router.post('/add_new_item/:id', function(req, res) {
   });
 });
 
-  
+// put list_item Put Route  
+router.put('/delete_item/:id/:did', function(req, res) {
+  let query = {_id: req.params.id};
+  Article.findById(query, function(err, article) {
+    for(var i = 0; i < article.list_item.length; i++) {
+      if(article.list_item[i].id == req.params.did) {
+          article.list_item.splice(i, 1);
+          break;
+      }
+  }
+    
+    Article.update(query, article, function(err) {
+      if(err) {
+        console.log(err);
+        return;
+      } else {
+        req.flash('success', 'Eintrag aktualisiert!');
+        res.send('Success');
+      }
+    });
+  })
+});
+
+
 //Update checkbox PUT Route
 router.put('/edit_check/:id/:did', function(req, res) {
   let query = {_id: req.params.id};
   Article.findById(query, function(err, article) {
     let latt = article.list_item.find(x => x.id == req.params.did);
+    console.log(latt);
     latt.checked =! latt.checked;
     
     Article.update(query, article, function(err) {

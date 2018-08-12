@@ -23,25 +23,19 @@ $(document).ready(function() {
 
   $('.delete-item').on('click', function(e){
     $target = $(e.target);
-    console.log('$target: ', $target);
     const id = $target.attr('data-id');
-    console.log('id: ', id);
-
-    // if(confirm('Bist Du sicher?')) {
-    //   $target = $(e.target);
-    //   console.log('$target: ', $target);
-    //   const id = $target.attr('data-id');
-    //   $.ajax({
-    //     type: 'DELETE',
-    //     url:'/articles/' + id,
-    //     success: function(response) {
-    //       window.location.href='/'
-    //     },
-    //     error: function(err) {
-    //       console.log(err);
-    //     }
-    //   });
-    // }; 
+    const did = $target.attr('id');
+    $.ajax({
+      type: 'PUT',
+      url:'/articles/delete_item/' + id + '/' + did,
+      success: function(response) {
+        window.location.href='/articles/'+id; 
+        console.log('Deletetd, Asikopp!!!');
+      },
+      error: function(err) {
+        console.log(err); 
+      }
+    });
   });
 
   $('.checkbox').on('click', function(e) {
