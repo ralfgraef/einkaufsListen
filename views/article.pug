@@ -2,7 +2,7 @@ extends layout
 
 block content
   h2(id='hzwei')
-    img(src='/img/' + article.title + '.png' alt='Logo')
+    img(src='/img/' + article.title.toLowerCase() + '.png' alt='Logo')
   a(href='/articles/article_item/' + article._id)
     i(id='new_item').fas.fa-plus-circle.float-right
       

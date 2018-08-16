@@ -8,7 +8,7 @@ block content
   ul.list-group
     each article, i in articles
       li.list-group-item
-        img(src='/img/' + article.title + '.png' alt='Logo')
+        img(src='/img/' + article.title.toLowerCase() + '.png' alt='Logo')
         h4
           a(href="/articles/" + article._id)
             i.far.fa-edit.float-right 
